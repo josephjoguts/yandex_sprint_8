@@ -2,7 +2,8 @@
     "name": "reports-frontend",
     "version": "0.1.0",
     "private": true,
-    "dependencies": {
+
+  "dependencies": {
       "@react-keycloak/web": "^3.4.0",
       "@types/node": "^16.18.0",
       "@types/react": "^18.0.0",

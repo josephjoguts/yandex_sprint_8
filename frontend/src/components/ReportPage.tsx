@@ -15,6 +15,8 @@ const ReportPage: React.FC = () => {
     try {
       setLoading(true);
       setError(null);
+      console.log("API URL:", process.env.REACT_APP_API_URL);
+      console.log("token:", keycloak.token);
 
       const response = await fetch(`${process.env.REACT_APP_API_URL}/reports`, {
         headers: {
