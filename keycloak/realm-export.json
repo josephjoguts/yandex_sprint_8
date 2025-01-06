@@ -1,9 +1,6 @@
 {
     "realm": "reports-realm",
     "enabled": true,
-    "attributes": {
-    "frontendUrl": "http://keycloak:8080"
-    },
     "roles": {
       "realm": [
         {

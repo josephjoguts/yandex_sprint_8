@@ -8,7 +8,7 @@ services:
       POSTGRES_USER: keycloak_user
       POSTGRES_PASSWORD: keycloak_password
     volumes:
-      - ./postgres-keycloak-data:/var/lib/postgresql/data
+      - postgres-keycloak-data-1:/var/lib/postgresql/data
     ports:
       - "5433:5432"
   keycloak:
@@ -50,3 +50,11 @@ services:
       - "8000:8000"
     depends_on:
       - keycloak
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-keycloak-data-1:
